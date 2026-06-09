@@ -1,5 +1,6 @@
 import fastify from 'fastify';
 import { PrismaClient } from '@prisma/client';
+import { ping } from './functions';
 
 const prisma = new PrismaClient();
 
@@ -10,11 +11,7 @@ const HOST = process.env.HOST || '127.0.0.1';
 
 server.get('/ping', async (_, reply) => {
   try {
-    await prisma.counter.create({
-      data: {},
-    });
-
-    const count = await prisma.counter.count();
+    const count = await ping(prisma);
 
     return reply.status(200).send({ count });
   } catch (error: any) {

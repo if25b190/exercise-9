@@ -30,6 +30,7 @@
     "@jest/globals": "^30.4.1",
     "@types/node": "^22.13.4",
     "dotenv-cli": "^8.0.0",
+    "jest-mock-extended": "^4.0.1",
     "nodemon": "^3.1.9",
     "prisma": "^6.4.0",
     "ts-jest": "^29.4.9",

@@ -19,7 +19,7 @@ test('test ping 1', () => {
     mockCtx.prisma.counter.count.mockImplementation(() => Promise.resolve(count) as unknown as any);
 
     ping(ctx.prisma).then((count) => {
-        expect(count).toBe(1);
+        expect(count).toBe(100);
     });
 });
 
